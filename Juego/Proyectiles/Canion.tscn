@@ -7,7 +7,9 @@
 [node name="Canion" type="Node2D"]
 script = ExtResource( 1 )
 proyectil = ExtResource( 3 )
-velocidad_proyectil = 1600
+cadencia_disparo = 1.5
+velocidad_proyectil = 1000
+danio_proyectil = 3
 
 [node name="PuntoIzquierdo" type="Position2D" parent="."]
 
