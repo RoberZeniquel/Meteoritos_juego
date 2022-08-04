@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Juego/Proyectiles/Laser/LaserBeam2D.gd" type="Script" id=1]
 [ext_resource path="res://Juego/Proyectiles/Laser/glowing_circle.png" type="Texture" id=2]
-[ext_resource path="res://Juego/Proyectiles/Laser/laserLarge.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Juego/Proyectiles/Laser/LaserSFX.ogg" type="AudioStream" id=3]
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0.582915, 1 )
@@ -60,7 +60,9 @@ scale = 0.5
 scale_curve = SubResource( 4 )
 color_ramp = SubResource( 2 )
 
-[node name="LaserBeam2D" type="RayCast2D"]
+[node name="Laser" type="RayCast2D"]
+z_index = 41
+z_as_relative = false
 enabled = true
 cast_to = Vector2( 0, 0 )
 script = ExtResource( 1 )
@@ -113,4 +115,3 @@ texture = ExtResource( 2 )
 
 [node name="LaserSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
-attenuation = 55.7152
