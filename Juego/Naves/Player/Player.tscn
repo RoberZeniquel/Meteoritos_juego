@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Juego/Naves/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://TemporalAssets/PNG/playerShip1_orange.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Juego/Naves/Player/Estela/Trail2D.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Juego/Naves/Player/Motor/Motor.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Juego/Naves/Player/ImpactoSFX.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Juego/Naves/Player/Escudo/Escudo.tscn" type="PackedScene" id=8]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -93,6 +94,8 @@ anims/spawn = SubResource( 5 )
 
 [node name="ImpactoSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+
+[node name="Escudo" parent="." instance=ExtResource( 8 )]
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 
